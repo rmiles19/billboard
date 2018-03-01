@@ -1,2 +1,8 @@
-<h1>Magazines#index</h1>
-<p>Find me in app/views/magazines/index.html.erb</p>
+<h1>Click a list to view top songs!</h1>
+<%= link_to 'Create a Billboard list', new_magazine_path %>
+<ul>
+    <%= @magazines.each do |magazine| %>
+      <li><%= link_to magazine.list_name, magazine %></li>
+  <% end %>
+
+</ul>

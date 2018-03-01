@@ -1,2 +1,10 @@
-<h1>Magazines#show</h1>
-<p>Find me in app/views/magazines/show.html.erb</p>
+<h1><%= @magazine.list_name %></h1>
+<hr />
+<p>What would you like to do?</p>
+<%= link_to 'View Songs', magazine_songs_path(@magazine) %>
+<br />
+<%= link_to 'Edit Song', edit_songs_path(@magazine) %>
+<br/>
+<%= link_to 'Delete Song', @magazine, method: :delete %>
+<br/>
+<%= link_to 'Back', songs_path %>

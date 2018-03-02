@@ -2,9 +2,14 @@
 <%= link_to 'Create a Billboard list', new_magazine_path %>
 <ul>
     <% @magazines.each do |magazine| %>
+<<<<<<< HEAD
       <li>
         <%= link_to magazine.list_name, magazine %>
       </li>
     <% end %>
+=======
+      <li><%= link_to magazine.list_name, magazine %></li>
+  <% end %>
+>>>>>>> 835cf011f29663e89cb1ed33555c0b2df56f6a5a
 
 </ul>

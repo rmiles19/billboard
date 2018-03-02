@@ -14,7 +14,7 @@ class MagazinesController < ApplicationController
   end
 
   def edit 
-    redner partial: 'form'
+    render partial: 'form'
   end
 
   def create

@@ -1,4 +1,4 @@
 class Song < ApplicationRecord
   belongs_to :artist
-  belongs_to :magazine
+  belongs_to :magazine, optional: true
 end

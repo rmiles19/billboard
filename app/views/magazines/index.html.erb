@@ -1,8 +1,10 @@
 <h1>Click a list to view top songs!</h1>
 <%= link_to 'Create a Billboard list', new_magazine_path %>
 <ul>
-    <%= @magazines.each do |magazine| %>
-      <li><%= link_to magazine.list_name, magazine %></li>
-  <% end %>
+    <% @magazines.each do |magazine| %>
+      <li>
+        <%= link_to magazine.list_name, magazine %>
+      </li>
+    <% end %>
 
 </ul>

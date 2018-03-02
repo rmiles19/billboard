@@ -19,10 +19,9 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = @maginze.songs.new(song_params)
-
+    @song = Song.new(song_params)
     if @song.save
-      redirect_to magazine_songs_path(@magazine)
+      redirect_to magazines_path
     else
       render :new
     end

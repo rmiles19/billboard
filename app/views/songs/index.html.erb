@@ -1,5 +1,5 @@
 <h1>Click a Song To View</h1>
-<%= link_to 'Create a new song', new_artist_song_path(@artist) %>
+<%= link_to 'Create a new song', new_song_path(@artist) %>
 <ul>
   <% @songs.each do |song| %>
     <li><%= link_to song.title, [@artist, song] %></li>

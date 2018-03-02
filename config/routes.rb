@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'magazines#index'
+
+  resources :magazines
+  resources :songs
+  resources :artist
+
+  scope 'magazines/:magazine_id', as: 'magazine' do
+    resources :songs
+  end
+
 
 end
- 

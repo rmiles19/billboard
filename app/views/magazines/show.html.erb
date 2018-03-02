@@ -1,10 +1,13 @@
 <h1><%= @magazine.list_name %></h1>
 <hr />
 <p>What would you like to do?</p>
+<br />
+<%= link_to 'Create a new song', new_magazine_song_path(@magazine) %>
+<br />
 <%= link_to 'View Songs', magazine_songs_path(@magazine) %>
 <br />
-<%= link_to 'Edit Song', edit_songs_path(@magazine) %>
+<%= link_to 'Edit Song', edit_magazine_song_path(@magazine) %>
 <br/>
 <%= link_to 'Delete Song', @magazine, method: :delete %>
 <br/>
-<%= link_to 'Back', songs_path %>
+<%= link_to 'Back', magazine_path %>
